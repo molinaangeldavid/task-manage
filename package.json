@@ -1,0 +1,26 @@
+{
+  "name": "tasks-completer",
+  "version": "1.0.0",
+  "description": "List, complete and delete tasks",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/molinaangeldavid/task-manage.git"
+  },
+  "author": "Angel Molina",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/molinaangeldavid/task-manage/issues"
+  },
+  "homepage": "https://github.com/molinaangeldavid/task-manage#readme",
+  "dependencies": {
+    "colors": "^1.4.0",
+    "inquirer": "^9.2.12"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.3"
+  }
+}
