@@ -1,4 +1,5 @@
 {
+  "type": "module",
   "name": "tasks-completer",
   "version": "1.0.0",
   "description": "List, complete and delete tasks",
@@ -17,8 +18,9 @@
   },
   "homepage": "https://github.com/molinaangeldavid/task-manage#readme",
   "dependencies": {
+    "@inquirer/prompts": "^3.3.0",
     "colors": "^1.4.0",
-    "inquirer": "^9.2.12"
+    "inquirer": "^8.2.6"
   },
   "devDependencies": {
     "nodemon": "^3.0.3"

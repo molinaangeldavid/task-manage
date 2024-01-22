@@ -1,7 +1,14 @@
-require('colors')
-console.clear();
+import colors from 'colors';
+import {inquirerMenu} from './helpers/inquirer.js'
+import {pause} from './helpers/inquirer.js'
 const main  = async() => {
-    console.log('HOla puto!!!')
+    let opt;
+    do {
+        
+        opt = await inquirerMenu()
+        console.log(opt)
+        await pause()
+    } while (opt != 0);
 }
 
-main()
+main() 
