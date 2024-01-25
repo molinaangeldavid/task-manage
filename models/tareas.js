@@ -67,4 +67,25 @@ export default class Tasks {
         }
     }
 
+    deleteTask(id){
+        if (this._list[id]){
+            delete this._list[id]
+        }
+    }
+
+    CompleteTasks(ids){
+        ids.forEach(id => {
+            const task = this._list[id]
+            if(!task.completeIn){
+                task.completeIn = new Date().toISOString()
+            }
+        })
+
+        this.listArray.forEach(task => {
+            if (! ids.includes(task.id)){
+                this._list[task.id].completeIn = null
+            }
+        })
+    }
+
 }

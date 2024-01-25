@@ -1,4 +1,4 @@
-import {inquirerMenu, pause, readInput} from './helpers/inquirer.js'
+import {choiceTasks, confirmDeleteTask, inquirerMenu, pause, readInput, choiceCompleteTasks} from './helpers/inquirer.js'
 import { readFile, saveFile } from './helpers/manageFile.js';
 import Tasks from './models/tareas.js';
 const main  = async() => {
@@ -30,10 +30,18 @@ const main  = async() => {
                 console.log(tasks.TasksPendingCompleted(false))
                 break;
             case 5:
-                
+                const ids = await choiceCompleteTasks(tasks.listArray)
+                tasks.CompleteTasks(ids)
             break;
             case 6:
-                
+                const id = await choiceTasks(tasks.listArray)
+                if (id != 0){
+                    const answer = await confirmDeleteTask()
+                    if(answer){
+                        tasks.deleteTask(id)
+                        console.log('Task removed successfully')
+                    }
+                }
             break;
             case 0:
                 
